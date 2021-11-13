@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    
+//computerPlay=['rock','paper','scissors']
+ //var randomNumber= computerPlay[Math.floor(Math.random()*computerPlay.length)];
+ function computerPlay(possibleOptions){
+    return randomOption;
+
+}
+
+
+
+var possibleOptions = ['rock','paper','scissors'];
+
+
+const randomOption = possibleOptions[Math.floor(Math.random() * possibleOptions.length)]; 
+
+
+
+function  playRound(playerSelection, computerSeletion) {
+
+    playerSelection = playerSelection.toLowerCase()
+computerSelection = computerSelection.toLowerCase()
+
+
+   if (playerSelection === computerSelection) {
+        alert('The result is a tie')
+
+
+}
+
+    else  if (playerSelection === 'rock' && computerSelection === 'paper') {
+    alert('You lost! paper beats rock')
+
+}
+
+else if (playerSelection === 'paper' && computerSelection === 'rock') {
+    alert('You Win! Paper beats Rock')
+}
+
+else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+    alert('You lost! Scissors beats Paper')
+}
+
+
+
+else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+       alert('You win! Scissors beats Paper')
+
+}
+
+else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+       alert('You lose! Rock beats Scissors')
+
+}
+
+else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+       alert('You win! Rock beats Scissors')
+}
+
+}
+
+
+let playerSelection = prompt("rock, paper or scissors?")
+var computerSelection = computerPlay(randomOption)
+playRound(playerSelection, computerSelection)
+
+    
+  </script>
+  
+</body>
+</html>
