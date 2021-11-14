@@ -6,74 +6,76 @@
 </head>
 <body>
   <script>
-    // Your JavaScript goes here!
-    
-//computerPlay=['rock','paper','scissors']
- //var randomNumber= computerPlay[Math.floor(Math.random()*computerPlay.length)];
- function computerPlay(possibleOptions){
-    return randomOption;
-
-}
+      const move=['rock','paper','scissors']
+      let cscore=0;
+      let uscore=0;
 
 
-
-var possibleOptions = ['rock','paper','scissors'];
-
-
-const randomOption = possibleOptions[Math.floor(Math.random() * possibleOptions.length)]; 
-
-
-
-function  playRound(playerSelection, computerSeletion) {
-
-    playerSelection = playerSelection.toLowerCase()
-computerSelection = computerSelection.toLowerCase()
-
-
-   if (playerSelection === computerSelection) {
-        alert('The result is a tie')
-
+      function computerPlay(){
+          return move[Math.floor(Math.random()*move.length)]
+      }
+      function playRound()
+      {
+        const playerSelection=prompt('rock paper scissors?')
+          const computerSelection=computerPlay()
+       
+          if (playerSelection === computerSelection) {
+        console.log('The result is a tie')
+            
 
 }
 
     else  if (playerSelection === 'rock' && computerSelection === 'paper') {
-    alert('You lost! paper beats rock')
-
+    console.log('You lost! paper beats rock')
+      cscore++
 }
 
 else if (playerSelection === 'paper' && computerSelection === 'rock') {
-    alert('You Win! Paper beats Rock')
+    console.log('You Win! Paper beats Rock')
+   uscore++
 }
 
 else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-    alert('You lost! Scissors beats Paper')
+    console.log('You lost! Scissors beats Paper')
+    cscore++
 }
 
 
 
 else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-       alert('You win! Scissors beats Paper')
+       console.log('You win! Scissors beats Paper')
+       uscore++
 
 }
 
 else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-       alert('You lose! Rock beats Scissors')
+       console.log('You lose! Rock beats Scissors')
+     cscore++
 
 }
 
 else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-       alert('You win! Rock beats Scissors')
+       console.log('You win! Rock beats Scissors')
+     uscore++
 }
-
+      }
+      function game(){
+        //console.log(playRound())
+          //console.log(playRound())
+          //console.log(playRound())
+          //console.log(playRound())
+          //console.log(playRound())
+      for (var i=0;i<5;i++)
+      playRound();
+        }
+   game();
+   console.log('Your score:'+uscore+'\nComputer score:'+cscore)
+if(uscore>cscore){
+  console.log('winner!')
 }
+else{ console.log("loser!")}
+       </script>
 
-
-let playerSelection = prompt("rock, paper or scissors?")
-var computerSelection = computerPlay(randomOption)
-playRound(playerSelection, computerSelection)
-
-    
-  </script>
   
 </body>
 </html>
