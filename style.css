@@ -1,0 +1,42 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-color: black;
+    font-family:"Share Tech Mono";
+    color: red;
+}
+.options{
+    margin: 300px 0 0 240px;
+    padding: 0 40px 0 40px;
+    border-radius: 10%;
+    font-family:"Share Tech Mono";
+    background-color: white;
+}
+.heading{
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.score{
+    margin: 80px 0 0 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#uscore{
+    padding-right: 340px;
+}
+.details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 0 0 20px;
+}
+#yourScore{
+    padding: 0 160px 0 0;
+}
+#ComputerScore{
+    padding: 0 0 0 70px;
+}
